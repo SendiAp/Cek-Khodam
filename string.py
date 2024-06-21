@@ -1,1 +1,12 @@
-
+Khodam = [
+  "Kosong"
+  "Pendamping Para Raja"
+  "Pendamping Para Ratu dan Putri"
+  "Raja Maca"
+  "Naga"
+  "Harimau Putih"
+  "Ular Naga"
+  "Buaya Putih"
+  "Stoples Kaca"
+  "Honda Verza"
+  "Cermin Retak"
