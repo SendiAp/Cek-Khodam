@@ -7,6 +7,12 @@ Khodam = [
   "Harimau Putih"
   "Ular Naga"
   "Buaya Putih"
+  "Bhatara Karang"
+  "Sulaiman"
+  "Rawa Rontek"
+  "Macan Tutul"
+  "Nyi Blorong"
   "Stoples Kaca"
   "Honda Verza"
   "Cermin Retak"
+]
