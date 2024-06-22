@@ -97,7 +97,7 @@ async def cekkhodam(bot : Client, message : Message):
     chat_id = message.chat.id
     msg = get_arg(message)
 
-    text = f"{random.choice(EMOJIS)} {msg} Memiliki Khodam **{khodam}**"
+    text = f"{random.choice(EMOJIS)} <b>{msg}</b> Memiliki Khodam **{khodam}**"
     txt = f"{random.choice(EMOJIS)} Saya Tidak Melihat Khodam {msg} - Artinya Khodam {msg} <b>Kosong</b>"
     if not msg:
         return await message.reply(text="❌ Berikan Saya Sebuah Nama - Contoh /cekKhodam Sabrina")
@@ -105,7 +105,8 @@ async def cekkhodam(bot : Client, message : Message):
     xx = await message.reply(f"🔍 Sedang Melihat Khodam {msg} ....")
 
     if khodam in kosong:
-        return await bot.send_photo(chat_id, f"photo/{khodam}.jpg", caption=txt)
+        await bot.send_photo(chat_id, f"photo/{khodam}.jpg", caption=txt)
+        return await xx.delete()
 
     try: 
         await bot.send_photo(chat_id, f"photo/{khodam}.jpg", caption=text)
@@ -121,7 +122,7 @@ async def cekkhodam(bot : Client, message : Message):
     chat_id = message.chat.id
     msg = get_arg(message)
 
-    text = f"{random.choice(EMOJIS)} {msg} Memiliki Khodam **{khodam}**"
+    text = f"{random.choice(EMOJIS)} <b>{msg}</b> Memiliki Khodam **{khodam}**"
     txt = f"{random.choice(EMOJIS)} Saya Tidak Melihat Khodam {msg} - Artinya Khodam {msg} <b>Kosong</b>"
     if not msg:
         return await message.reply(text="❌ Berikan Saya Sebuah Nama - Contoh /cekKhodam Sabrina")
@@ -129,7 +130,8 @@ async def cekkhodam(bot : Client, message : Message):
     xx = await message.reply(f"🔍 Sedang Melihat Khodam {msg} ....")
 
     if khodam in kosong:
-        return await bot.send_photo(chat_id, f"photo/{khodam}.jpg", caption=txt)
+        await bot.send_photo(chat_id, f"photo/{khodam}.jpg", caption=txt)
+        return await xx.delete()
 
     try: 
         await bot.send_photo(chat_id, f"photo/{khodam}.jpg", caption=text)
