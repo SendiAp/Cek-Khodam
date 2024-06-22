@@ -19,5 +19,15 @@ Pasukan = [
   "LemariPlastik",
   "KulkasMini",
   "CangkirTeh",
-  "KomporGas"
+  "KomporGas",
+  "CerekAir",
+  "SelimutTebal",
+  "NenekLampir",
+  "GajahPutih",
+  "BantengSakti",
+  "MioMirza",
+  "KucingHitam",
+  "RusaEmas",
+  "KipasAngin",
+  "SingaBermahKota"
 ]
