@@ -152,7 +152,7 @@ async def send_msg(chat_id, message: Message):
         await asyncio.sleep(int(e.value))
         return send_msg(chat_id, message)
 
-@smk.on_message(filters.command("gucast"))
+@bot.on_message(filters.command("gucast"))
 @admins
 async def SMProjectUser(bot : Client, message : Message):
     users = await get_gcast()
