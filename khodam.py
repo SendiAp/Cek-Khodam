@@ -38,7 +38,7 @@ async def cekkhodam(bot : Client, message : Message):
         await bot.send_photo(chat_id, khodam, (' > {text}'), parse_mode=ParseMode.MARKDOWN)
         await xx.delete()
     except BaseException as e:
-        return message.reply_text(f"`{e}`")
+        return await message.reply_text(f"`{e}`")
 
 
 print('🔥 [BOT BERHASIL DIAKTIFKAN] 🔥')
