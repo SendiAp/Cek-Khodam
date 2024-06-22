@@ -30,7 +30,17 @@ Gunakan Perintah:
 Jangan lupa dishare ketemanmu🤜
 """
 
+def broadcast(func):
+    async def wrapper(client, message):
+        chat_id = message.chat.id
+        broadcast = await get_smk()
+        if user_id not in broadcast:
+            await add_smk(user_id)
+        await func(client, message)
+    return wrapper
+    
 @bot.on_message(filters.command("start") & filters.private)
+@broadcast
 async def start(bot : Client, message : Message):
     name = message.from_user.first_name
     await message.reply(START_TEXT.format(name))
