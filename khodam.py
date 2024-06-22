@@ -12,5 +12,10 @@ bot = Client(
 
 @bot.on_message(filters.command("cekKhodam"))
 async def cekkhodam(bot : Client, message : Message):
-    try: 
+    msg = get_arg(message)
+    if message.reply_to_message:
+        msg = message.reply_to_message
+
+    if not msg:
+        return await message.reply(text="❌ Berikan Saya Pesan / Reply Sebuah Pesan.")
         
