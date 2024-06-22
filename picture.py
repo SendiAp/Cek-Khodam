@@ -9,7 +9,7 @@ Pasukan = [
   "RatuUlar",
   "StoplesKaca",
   "HondaVerza",
-  "CerminRetak",
+  "CerminRetak"
 ]
 
 
