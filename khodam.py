@@ -33,7 +33,7 @@ async def cekkhodam(bot : Client, message : Message):
     
     try: 
         Cek-Khodam = "➡️ <b>Khodam {msg}:</b> {khodam}"
-        await bot.send_photo(chat_id, khodam, (' > {Cek-Khodam}'))
+        await bot.send_photo(chat_id, khodam, (' > {Cek-Khodam}'), parse_mode=ParseMode.MARKDOWN)
         await xx.delete()
     except BaseException as e:
         return message.reply(f"`{e}`")
