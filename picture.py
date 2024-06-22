@@ -1,4 +1,4 @@
-Khodam = [
+Pasukan = [
   "Kosong"
   "PendampingParaRaja"
   "PendampingParaRatu"
