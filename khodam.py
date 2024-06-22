@@ -32,9 +32,22 @@ StoplesKaca = "https://telegra.ph//file/6a0a6100cab573248ecac.jpg"
 HondaVerza = "https://telegra.ph//file/86571ce13c3a8a1eaeb0a.jpg"
 CerminRetak = "https://telegra.ph//file/d886549e633148b515a1e.jpg"
 
+REPLACEMENT_MAP = {
+        "a": "ɐ",
+        "b": "q",
+        "c": "ɔ",
+        "d": "p",
+        "e": "ǝ",
+        "f": "ɟ",
+        "g": "ƃ",
+        "h": "ɥ",
+        "i": "ᴉ",
+        "j": "ɾ",
+}
+
 @bot.on_message(filters.command("cekKhodam"))
 async def cekkhodam(bot : Client, message : Message):
-    khodam = f"{random.choice(Pasukan)}"
+    khodam = f"{random.choice(REPLACEMENT_MAP)}"
     chat_id = message.chat.id
     gambar = f"{khodam}"
     msg = get_arg(message)
