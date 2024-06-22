@@ -14,6 +14,8 @@ bot = Client(
     bot_token=BOT_TOKEN
 )
 
+ADMINS = [6847847442]
+
 EMOJIS = [
         "👍", "👎", "❤", "🔥", 
         "🥰", "👏", "😁", "🤔",
@@ -36,6 +38,16 @@ EMOJIS = [
         "😡"
 ]
 
+def admins(func):
+    async def wrapper(client, message):
+        user_id = message.from_user.id
+        if user_id not in ADMINS:
+            p = await message.reply_text(f"❌ <b>Hanya Admins!</b>")
+            await p.delete()
+            return 
+        await func(client, message)
+    return wrapper
+    
 def get_arg(message: Message):
     msg = message.text
     msg = msg.replace(" ", "", 1) if msg[1] == " " else msg
