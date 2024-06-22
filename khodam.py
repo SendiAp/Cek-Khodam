@@ -30,7 +30,7 @@ async def cekkhodam(bot : Client, message : Message):
     if message.reply_to_message:
         msg = message.reply_to_message
 
-    text = f"➡️ Khodam {msg}: <b>{khodam}</b>"
+    text = f"➡️ Khodam {msg}: **{khodam}**"
     if not msg:
         return await message.reply(text="❌ Berikan Saya Pesan / Reply Sebuah Pesan/nama.")
 
