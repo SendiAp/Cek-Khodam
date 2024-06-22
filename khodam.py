@@ -21,9 +21,7 @@ def get_arg(message: Message):
         return ""
     return " ".join(split[1:])
 
-Naga = [
-  "https://telegra.ph//file/f05e380481daee9738cd9.jpg"
-]
+Naga = "https://telegra.ph//file/f05e380481daee9738cd9.jpg"
 
 @bot.on_message(filters.command("cekKhodam"))
 async def cekkhodam(bot : Client, message : Message):
