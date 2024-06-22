@@ -17,5 +17,6 @@ async def cekkhodam(bot : Client, message : Message):
         msg = message.reply_to_message
 
     if not msg:
-        return await message.reply(text="❌ Berikan Saya Pesan / Reply Sebuah Pesan.")
-        
+        return await message.reply(text="❌ Berikan Saya Pesan / Reply Sebuah Pesan/nama.")
+
+    await message.reply(f"🔍 Sedang Melihat Khodam {msg} ....")
