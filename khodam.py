@@ -21,6 +21,10 @@ def get_arg(message: Message):
         return ""
     return " ".join(split[1:])
 
+Babi = [
+    "Naga"
+]
+
 @bot.on_message(filters.command("cekKhodam"))
 async def cekkhodam(bot : Client, message : Message):
     khodam = f"{random.choice(Babi)}"
