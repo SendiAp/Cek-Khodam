@@ -32,24 +32,12 @@ StoplesKaca = "https://telegra.ph//file/6a0a6100cab573248ecac.jpg"
 HondaVerza = "https://telegra.ph//file/86571ce13c3a8a1eaeb0a.jpg"
 CerminRetak = "https://telegra.ph//file/d886549e633148b515a1e.jpg"
 
-REPLACEMENT_MAP = {
-        "a": "ɐ",
-        "b": "q",
-        "c": "ɔ",
-        "d": "p",
-        "e": "ǝ",
-        "f": "ɟ",
-        "g": "ƃ",
-        "h": "ɥ",
-        "i": "ᴉ",
-        "j": "ɾ",
-}
-
 @bot.on_message(filters.command("cekKhodam"))
 async def cekkhodam(bot : Client, message : Message):
-    khodam = f"{random.choice(REPLACEMENT_MAP)}"
+    khodam = f"{random.choice(Picture)}"
     chat_id = message.chat.id
     gambar = f"{khodam}"
+    picture = f"{gambar}"
     msg = get_arg(message)
     if message.reply_to_message:
         msg = message.reply_to_message
@@ -61,7 +49,7 @@ async def cekkhodam(bot : Client, message : Message):
     xx = await message.reply_text(f"🔍 Sedang Melihat Khodam {msg} ....")
     
     try: 
-        await bot.send_photo(chat_id, gambar, text)
+        await bot.send_photo(chat_id, picture, text)
         await xx.delete()
     except BaseException as e:
         return await message.reply_text(f"`{e}`")
