@@ -4,7 +4,7 @@ from motor.motor_asyncio import AsyncIOMotorClient
 
 from config import *
 
-mongo_client = AsyncIOMotorClient(MONGO_DB)
+mongo_client = AsyncIOMotorClient(MONGO_DB_URL)
 db = mongo_client[DB_NAME]
 
 actchat = db['ACTIVEDVEDCHATS']
