@@ -12,7 +12,9 @@ Khodam = [
   "Cermin Retak"
 ]
 
-Pendamping Para Raja = ["https://telegra.ph//file/6d9664766fbdb75a2ccca.jpg"]
+sendi = "https://telegra.ph//file/6d9664766fbdb75a2ccca.jpg"
+
+Pendamping Para Raja = "https://telegra.ph//file/6d9664766fbdb75a2ccca.jpg"]
 
 Pendamping Para Ratu Dan Putri = ["https://telegra.ph//file/1c4bf541590a66901b665.jpg"]
 
