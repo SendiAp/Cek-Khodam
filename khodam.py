@@ -1,9 +1,9 @@
 from pyrogram.enums import ParseMode
 from pyrogram import Client, filters
 from pyrogram.types import *
-from random import choice
 from config import *
 from picture import *
+import random
 import os
 
 bot = Client(
@@ -23,7 +23,7 @@ def get_arg(message: Message):
 
 @bot.on_message(filters.command("cekKhodam"))
 async def cekkhodam(bot : Client, message : Message):
-    khodam = choice(Khodam)
+    khodam = random.choice(Pasukan)
     chat_id = message.chat.id
     msg = get_arg(message)
     if message.reply_to_message:
