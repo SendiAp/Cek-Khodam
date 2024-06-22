@@ -21,13 +21,9 @@ def get_arg(message: Message):
         return ""
     return " ".join(split[1:])
 
-Babi = [
-    "Naga"
-]
-
 @bot.on_message(filters.command("cekKhodam"))
 async def cekkhodam(bot : Client, message : Message):
-    khodam = f"{random.choice(Babi)}"
+    khodam = random.choice(Pasukan)
     chat_id = message.chat.id
     msg = get_arg(message)
     if message.reply_to_message:
