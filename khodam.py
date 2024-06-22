@@ -1,8 +1,9 @@
 from pyrogram import Client, filters
+from random import choice
 from config import *
 from string import *
-import random
 import os
+
 
 bot = Client(
     "bot",
@@ -10,10 +11,10 @@ bot = Client(
     api_hash=API_HASH,
     bot_token=BOT_TOKEN
 )
-khodam = random.choice(Khodam)
 
 @bot.on_message(filters.command("cekKhodam"))
 async def cekkhodam(bot : Client, message : Message):
+    khodam = choice(Khodam)
     msg = get_arg(message)
     if message.reply_to_message:
         msg = message.reply_to_message
