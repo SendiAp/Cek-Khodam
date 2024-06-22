@@ -1,6 +1,7 @@
 from pyrogram.enums import ParseMode
 from pyrogram import Client, filters
 from pyrogram.types import *
+from db.database import *
 from config import *
 from khodam import *
 import random
