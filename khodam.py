@@ -10,4 +10,14 @@ Pasukan = [
   "StoplesKaca",
   "HondaVerza",
   "CerminRetak"
+  "PenaBocor",
+  "HondaCB150R",
+  "BaskomPlastik",
+  "GembokRusak",
+  "SandalJepit",
+  "BabiNgepet",
+  "LemariPlastik",
+  "KulkasMini",
+  "CangkirTeh",
+  "KomporGas"
 ]
