@@ -3,7 +3,7 @@ from pyrogram import Client, filters
 from pyrogram.types import *
 from random import choice
 from config import *
-from string import *
+from .picture import *
 import os
 
 bot = Client(
