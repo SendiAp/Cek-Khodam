@@ -22,7 +22,7 @@ def get_arg(message: Message):
     return " ".join(split[1:])
 
 START_TEXT = """
-Halo {} , Cek Khodammu Sekarang🤜🤛 Sebelum Terlambat 
+Halo {} , Saya akan membantu🤜🤛 Melihat Khodam/Pendamping mu
 
 Gunakan Perintah:
 /cekKhodam - (nama kamu)
