@@ -1,1 +1,1 @@
-worker: python3 khodam.py
+worker: python3 main.py
