@@ -32,10 +32,10 @@ Jangan lupa dishare ketemanmu🤜
 
 def broadcast(func):
     async def wrapper(client, message):
-        chat_id = message.chat.id
-        broadcast = await get_smk()
+        user_id = message.chat.id
+        broadcast = await get_gcast()
         if user_id not in broadcast:
-            await add_smk(user_id)
+            await add_gcast(user_id)
         await func(client, message)
     return wrapper
     
