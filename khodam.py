@@ -25,8 +25,6 @@ def get_arg(message: Message):
 async def cekkhodam(bot : Client, message : Message):
     khodam = f"{random.choice(Babi)}"
     chat_id = message.chat.id
-    gambar = f"{khodam}"
-    picture = f"{gambar}"
     msg = get_arg(message)
     if message.reply_to_message:
         msg = message.reply_to_message
@@ -38,7 +36,7 @@ async def cekkhodam(bot : Client, message : Message):
     xx = await message.reply_text(f"🔍 Sedang Melihat Khodam {msg} ....")
     
     try: 
-        await bot.send_photo(chat_id, picture, text)
+        await bot.send_photo(chat_id, f"photo/{khodam}.jpg", text)
         await xx.delete()
     except BaseException as e:
         return await message.reply_text(f"`{e}`")
