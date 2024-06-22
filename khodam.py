@@ -21,9 +21,17 @@ def get_arg(message: Message):
         return ""
     return " ".join(split[1:])
 
+Babi = [
+    "kontol"
+    "memek"
+]
+
+kontol = "https://telegra.ph//file/6d9664766fbdb75a2ccca.jpg"
+memek = "https://telegra.ph//file/1c4bf541590a66901b665.jpg"
+
 @bot.on_message(filters.command("cekKhodam"))
 async def cekkhodam(bot : Client, message : Message):
-    khodam = f"{random.choice(Pasukan)}"
+    khodam = f"{random.choice(Babi)}"
     chat_id = message.chat.id
     gambar = f"{khodam}"
     picture = f"{gambar}"
