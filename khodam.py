@@ -34,7 +34,7 @@ CerminRetak = "https://telegra.ph//file/d886549e633148b515a1e.jpg"
 
 @bot.on_message(filters.command("cekKhodam"))
 async def cekkhodam(bot : Client, message : Message):
-    khodam = f"{random.choice(Picture)}"
+    khodam = f"{random.choice(Pasukan)}"
     chat_id = message.chat.id
     gambar = f"{khodam}"
     picture = f"{gambar}"
