@@ -96,7 +96,7 @@ async def cekkhodam(bot : Client, message : Message):
     xx = await message.reply(f"🔍 Sedang Melihat Khodam {msg} ....")
 
     if khodam in kosong:
-        return await message.reply(text=txt)
+        return await await bot.send_photo(chat_id, f"photo/{khodam}.jpg", caption=txt)
         
     try: 
         await bot.send_photo(chat_id, f"photo/{khodam}.jpg", caption=text)
