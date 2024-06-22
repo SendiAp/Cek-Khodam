@@ -207,6 +207,22 @@ async def SMProjectChat(bot : Client, message : Message):
             failed += 1
     await out.edit(f"✅ **Berhasil Mengirim Pesan Ke {done} User.**\n❌ **Gagal Mengirim Pesan Ke {failed} User.**")
 
+MSG = """
+<b>📊 Statistik</b>
+
+<b>Jumlah Groups:</b> {}
+<b>Jumlah Users:</b> {}
+"""
+
+@bot.on_message(filters.command("stats"))
+@admins
+async def stats(bot : Client, message : Message):
+    gc = await get_actived_chats()
+    ss = await get_gcast()
+    group = len(gc)
+    user = len(ss)
+    await message.reply(MSG.format(group, user))
+    
 FORCESUB = InlineKeyboardMarkup(
     [
         [
