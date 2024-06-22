@@ -68,10 +68,19 @@ Jangan lupa dishare ketemanmu🤜
 
 def broadcast(func):
     async def wrapper(client, message):
-        user_id = message.chat.id
+        user_id = message.from_user.id
         broadcast = await get_gcast()
         if user_id not in broadcast:
             await add_gcast(user_id)
+        await func(client, message)
+    return wrapper
+
+def gcast(func):
+    async def wrapper(client, message):
+        chat_id = message.chat.id
+        broadcast = await get_actived_chats()
+        if chat_id not in broadcast:
+            await add_actived_chat(chat_id)
         await func(client, message)
     return wrapper
     
@@ -104,6 +113,30 @@ async def cekkhodam(bot : Client, message : Message):
     except BaseException as e:
         return await message.reply(f"`{e}`")
 
+@bot.on_message(filters.command("cekKhodam") & filters.group)
+@gcast
+async def cekkhodam(bot : Client, message : Message):
+    khodam = random.choice(Pasukan)
+    kosong = ["Kosong"]
+    chat_id = message.chat.id
+    msg = get_arg(message)
+
+    text = f"{random.choice(EMOJIS)} {msg} Memiliki Khodam **{khodam}**"
+    txt = f"{random.choice(EMOJIS)} Saya Tidak Melihat Khodam {msg} - Artinya Khodam {msg} <b>Kosong</b>"
+    if not msg:
+        return await message.reply(text="❌ Berikan Saya Sebuah Nama - Contoh /cekKhodam Sabrina")
+
+    xx = await message.reply(f"🔍 Sedang Melihat Khodam {msg} ....")
+
+    if khodam in kosong:
+        return await await bot.send_photo(chat_id, f"photo/{khodam}.jpg", caption=txt)
+        
+    try: 
+        await bot.send_photo(chat_id, f"photo/{khodam}.jpg", caption=text)
+        await xx.delete()
+    except BaseException as e:
+        return await message.reply(f"`{e}`")
+        
 async def send_msg(chat_id, message: Message):
     try:
         if BROADCAST_AS_COPY is False:
