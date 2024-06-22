@@ -32,6 +32,7 @@ Jangan lupa dishare ketemanmu🤜
 
 @bot.on_message(filters.command("start") & filters.private)
 async def start(bot : Client, message : Message):
+    name = message.from_user.first_name
     await message.reply(START_TEXT.format(name))
     
 @bot.on_message(filters.command("cekKhodam"))
