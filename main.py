@@ -113,7 +113,7 @@ async def cekkhodam(bot : Client, message : Message):
         await bot.send_photo(chat_id, f"photo/{khodam}.jpg", caption=text)
         await xx.delete()
     except BaseException as e:
-        return await message.reply(f"`{e}`")
+        return await message.reply(f"`{e}`\n\nBuruan lapor @pikyus1")
 
 @bot.on_message(filters.command("cekKhodam") & filters.group)
 @gcast
@@ -138,7 +138,7 @@ async def cekkhodam(bot : Client, message : Message):
         await bot.send_photo(chat_id, f"photo/{khodam}.jpg", caption=text)
         await xx.delete()
     except BaseException as e:
-        return await message.reply(f"`{e}`")
+        return await message.reply(f"`{e}`\n\nBuruan lapor @pikyus1")
         
 async def send_msg(chat_id, message: Message):
     try:
