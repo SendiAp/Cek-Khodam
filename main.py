@@ -2,7 +2,7 @@ from pyrogram.enums import ParseMode
 from pyrogram import Client, filters
 from pyrogram.types import *
 from config import *
-from picture import *
+from khodam import *
 import random
 import os
 
