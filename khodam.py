@@ -23,7 +23,7 @@ def get_arg(message: Message):
 
 @bot.on_message(filters.command("cekKhodam"))
 async def cekkhodam(bot : Client, message : Message):
-    khodam = random.choice(Pasukan)
+    khodam = f"{random.choice(Pasukan)}"
     chat_id = message.chat.id
     msg = get_arg(message)
     if message.reply_to_message:
