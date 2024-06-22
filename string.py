@@ -12,7 +12,7 @@ Khodam = [
   "Cermin Retak"
 ]
 
-sendi = "https://telegra.ph//file/6d9664766fbdb75a2ccca.jpg"
+Sendi = "https://telegra.ph//file/6d9664766fbdb75a2ccca.jpg"
 
 Pendamping Para Raja = "https://telegra.ph//file/6d9664766fbdb75a2ccca.jpg"]
 
