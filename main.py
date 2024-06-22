@@ -50,6 +50,7 @@ async def start(bot : Client, message : Message):
 @bot.on_message(filters.command("cekKhodam") & filters.private)
 async def cekkhodam(bot : Client, message : Message):
     khodam = random.choice(Pasukan)
+    kosong = ["Kosong"]
     chat_id = message.chat.id
     msg = get_arg(message)
 
@@ -60,7 +61,7 @@ async def cekkhodam(bot : Client, message : Message):
 
     xx = await message.reply(f"🔍 Sedang Melihat Khodam {msg} ....")
 
-    if khodam == Kosong:
+    if khodam in kosong:
         return await message.reply(text=txt)
         
     try: 
