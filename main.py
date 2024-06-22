@@ -67,7 +67,6 @@ async def cekkhodam(bot : Client, message : Message):
     except BaseException as e:
         return await message.reply(f"`{e}`")
 
-
 print('🔥 [BOT BERHASIL DIAKTIFKAN] 🔥')
 
 bot.run()
