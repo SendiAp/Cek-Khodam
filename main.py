@@ -27,6 +27,7 @@ Halo {} , Saya akan membantu🤜🤛 Melihat Khodam/Pendamping mu
 Gunakan Perintah:
 /cekKhodam - (nama kamu)
 
+👉 Saya juga bisa dimainkan digrub
 Jangan lupa dishare ketemanmu🤜
 """
 
