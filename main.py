@@ -106,7 +106,7 @@ async def send_msg(chat_id, message: Message):
 @smk.on_message(filters.command("gucast"))
 @admins
 async def SMProjectUser(bot : Client, message : Message):
-    users = await get_smk()
+    users = await get_gcast()
     msg = get_arg(message)
     if message.reply_to_message:
         msg = message.reply_to_message
