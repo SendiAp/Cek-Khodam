@@ -21,8 +21,6 @@ def get_arg(message: Message):
         return ""
     return " ".join(split[1:])
 
-Naga = "https://telegra.ph//file/f05e380481daee9738cd9.jpg"
-
 @bot.on_message(filters.command("cekKhodam"))
 async def cekkhodam(bot : Client, message : Message):
     khodam = f"{random.choice(Pasukan)}"
@@ -32,14 +30,14 @@ async def cekkhodam(bot : Client, message : Message):
     if message.reply_to_message:
         msg = message.reply_to_message
 
-    text = f"➡️ <b>Khodam {msg}:</b> {khodam}"
+    text = f"➡️ Khodam {msg}: <b>{khodam}</b>"
     if not msg:
         return await message.reply(text="❌ Berikan Saya Pesan / Reply Sebuah Pesan/nama.")
 
     xx = await message.reply_text(f"🔍 Sedang Melihat Khodam {msg} ....")
     
     try: 
-        await bot.send_photo(chat_id, Naga, (f' > {text}'), parse_mode=ParseMode.MARKDOWN)
+        await bot.send_photo(chat_id, gambar, text)
         await xx.delete()
     except BaseException as e:
         return await message.reply_text(f"`{e}`")
