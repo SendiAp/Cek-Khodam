@@ -92,6 +92,73 @@ async def cekkhodam(bot : Client, message : Message):
     except BaseException as e:
         return await message.reply(f"`{e}`")
 
+async def send_msg(chat_id, message: Message):
+    try:
+        if BROADCAST_AS_COPY is False:
+            await message.forward(chat_id=chat_id)
+        elif BROADCAST_AS_COPY is True:
+            await message.copy(chat_id=chat_id)
+        return 200, None
+    except FloodWait as e:
+        await asyncio.sleep(int(e.value))
+        return send_msg(chat_id, message)
+
+@smk.on_message(filters.command("gucast"))
+@admins
+async def SMProjectUser(bot : Client, message : Message):
+    users = await get_smk()
+    msg = get_arg(message)
+    if message.reply_to_message:
+        msg = message.reply_to_message
+
+    if not msg:
+        await message.reply(text="**Reply atau berikan saya sebuah pesan!**")
+        return
+    
+    out = await message.reply(text="**Memulai Broadcast...**")
+    
+    if not users:
+        await out.edit(text="**Maaf, Broadcast Gagal Karena Belum Ada user**")
+        return
+    
+    done = 0
+    failed = 0
+    for user in users:
+        try:
+            await send_msg(user, message=msg)
+            done += 1
+        except:
+            failed += 1
+    await out.edit(f"✅ **Berhasil Mengirim Pesan Ke {done} User.**\n❌ **Gagal Mengirim Pesan Ke {failed} User.**")
+
+@bot.on_message(filters.command("gcast"))
+@admins
+async def SMProjectChat(bot : Client, message : Message):
+    users = await get_actived_chats()
+    msg = get_arg(message)
+    if message.reply_to_message:
+        msg = message.reply_to_message
+
+    if not msg:
+        await message.reply(text="**Reply atau berikan saya sebuah pesan!**")
+        return
+    
+    out = await message.reply(text="**Memulai Broadcast...**")
+    
+    if not users:
+        await out.edit(text="**Maaf, Broadcast Gagal Karena Belum Ada user**")
+        return
+    
+    done = 0
+    failed = 0
+    for user in users:
+        try:
+            await send_msg(user, message=msg)
+            done += 1
+        except:
+            failed += 1
+    await out.edit(f"✅ **Berhasil Mengirim Pesan Ke {done} User.**\n❌ **Gagal Mengirim Pesan Ke {failed} User.**")
+    
 print('🔥 [BOT BERHASIL DIAKTIFKAN] 🔥')
 
 bot.run()
