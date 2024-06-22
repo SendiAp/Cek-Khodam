@@ -13,6 +13,10 @@ bot = Client(
     bot_token=BOT_TOKEN
 )
 
+StoplesKaca = [
+  "https://telegra.ph//file/6a0a6100cab573248ecac.jpg"
+]
+
 def get_arg(message: Message):
     msg = message.text
     msg = msg.replace(" ", "", 1) if msg[1] == " " else msg
@@ -36,7 +40,7 @@ async def cekkhodam(bot : Client, message : Message):
     xx = await message.reply_text(f"🔍 Sedang Melihat Khodam {msg} ....")
     
     try: 
-        await bot.send_photo(chat_id, khodam, (f' > {text}'), parse_mode=ParseMode.MARKDOWN)
+        await bot.send_photo(chat_id, StoplesKaca, (f' > {text}'), parse_mode=ParseMode.MARKDOWN)
         await xx.delete()
     except BaseException as e:
         return await message.reply_text(f"`{e}`")
