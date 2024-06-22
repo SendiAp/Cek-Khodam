@@ -30,6 +30,7 @@ async def cekkhodam(bot : Client, message : Message):
         return await message.reply(text="❌ Berikan Saya Pesan / Reply Sebuah Pesan/nama.")
 
     xx = await message.reply(f"🔍 Sedang Melihat Khodam {msg} ....")
+    
     try: 
         Cek-Khodam = "➡️ <b>Khodam {msg}:</b> {khodam}"
         await bot.send_photo(chat_id, khodam, (' > {Cek-Khodam}'))
