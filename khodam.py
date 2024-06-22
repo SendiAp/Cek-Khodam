@@ -4,7 +4,6 @@ from config import *
 from string import *
 import os
 
-
 bot = Client(
     "bot",
     api_id=API_ID,
