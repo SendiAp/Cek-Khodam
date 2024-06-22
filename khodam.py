@@ -22,7 +22,7 @@ def get_arg(message: Message):
     return " ".join(split[1:])
 
 Babi = [
-    "kontol"
+    "kontol",
     "memek"
 ]
 
