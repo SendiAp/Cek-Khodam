@@ -47,20 +47,22 @@ async def start(bot : Client, message : Message):
     name = message.from_user.first_name
     await message.reply(START_TEXT.format(name))
     
-@bot.on_message(filters.command("cekKhodam"))
+@bot.on_message(filters.command("cekKhodam") & filters.private)
 async def cekkhodam(bot : Client, message : Message):
     khodam = random.choice(Pasukan)
     chat_id = message.chat.id
     msg = get_arg(message)
-    if message.reply_to_message:
-        msg = message.reply_to_message
 
-    text = f"➡️ Khodam {msg}: **{khodam}**"
+    text = f"{random.choice(EMOJIS)} {msg} Memiliki Khodam **{khodam}**"
+    txt = f"{random.choice(EMOJIS)} Saya Tidak Melihat Khodam {msg} - Artinya Khodam {msg} <b>Kosong</b>"
     if not msg:
-        return await message.reply(text="❌ Berikan Saya Pesan / Reply Sebuah Pesan/nama.")
+        return await message.reply(text="❌ Berikan Saya Sebuah Nama - Contoh /cekKhodam Sabrina")
 
     xx = await message.reply(f"🔍 Sedang Melihat Khodam {msg} ....")
-    
+
+    if khodam == Kosong:
+        return await message.reply(text=txt)
+        
     try: 
         await bot.send_photo(chat_id, f"photo/{khodam}.jpg", caption=text)
         await xx.delete()
