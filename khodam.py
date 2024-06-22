@@ -1,5 +1,6 @@
 from pyrogram.enums import ParseMode
 from pyrogram import Client, filters
+from pyrogram.types import *
 from random import choice
 from config import *
 from string import *
