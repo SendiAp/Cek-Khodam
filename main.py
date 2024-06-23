@@ -1,5 +1,4 @@
 from pyrogram.errors import ChatAdminRequired, UserNotParticipant, ChatWriteForbidden
-from pyrogram.enums import ParseMode
 from pyrogram import Client, filters
 from pyrogram.types import *
 from config import *
