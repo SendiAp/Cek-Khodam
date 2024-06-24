@@ -30,4 +30,14 @@ Pasukan = [
   "RusaEmas",
   "KipasAngin",
   "SingaBermahKota"
+  "LampuTidur",
+  "GelasBergoyang",
+  "SendokGarpu",
+  "Kamera",
+  "KursiMuter",
+  "TasTerbang",
+  "SepatuTerbang",
+  "KainLap",
+  "Sisir",
+  "BotolKecap"
 ]
