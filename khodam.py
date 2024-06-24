@@ -29,7 +29,7 @@ Pasukan = [
   "KucingHitam",
   "RusaEmas",
   "KipasAngin",
-  "SingaBermahKota"
+  "SingaBermahKota",
   "LampuTidur",
   "GelasBergoyang",
   "SendokGarpu",
