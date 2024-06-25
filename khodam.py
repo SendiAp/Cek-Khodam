@@ -39,5 +39,15 @@ Pasukan = [
   "SepatuTerbang",
   "KainLap",
   "Sisir",
-  "BotolKecap"
+  "BotolKecap",
+  "KunciKamarMandi",
+  "AnjingPelacak",
+  "SingaBernyanyi",
+  "BantalBergoyang",
+  "UpinIpin",
+  "KertasBerlari",
+  "SabunMandi",
+  "KangGalon",
+  "DagingRendang",
+  "TempeBacem"
 ]
