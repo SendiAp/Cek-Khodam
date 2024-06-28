@@ -232,10 +232,10 @@ BOT_USERNAME = "CekKhodam1Bot"
 FORCESUB = InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardButton("Bergabung Ke Channel", url=f"t.me/{FORCE_SUB_CHANNEL}"),
+            InlineKeyboardButton("Bergabung Ke Channel", url=f"http://t.me/{FORCE_SUB_CHANNEL}"),
         ],
         [
-            InlineKeyboardButton("Bergabung Ke Groups", url=f"t.me/{FORCE_SUB_GROUP}"),
+            InlineKeyboardButton("Bergabung Ke Groups", url=f"http://t.me/{FORCE_SUB_GROUP}"),
         ],
         [
             InlineKeyboardButton("Coba Lagi", url=f"http://t.me/{BOT_USERNAME}?start=start"),
