@@ -106,6 +106,7 @@ async def cekkhodam(bot : Client, message : Message):
     xx = await message.reply(f"🔍 Sedang Melihat Khodam {msg} ....")
 
     if khodam in kosong:
+        await bot.send_chat_action(message.chat.id, enums.ChatAction.UPLOAD_PHOTO)
         await bot.send_photo(chat_id, f"photo/{khodam}.jpg", caption=txt)
         return await xx.delete()
 
@@ -131,6 +132,7 @@ async def cekkhodam(bot : Client, message : Message):
     xx = await message.reply(f"🔍 Sedang Melihat Khodam {msg} ....")
 
     if khodam in kosong:
+        await bot.send_chat_action(message.chat.id, enums.ChatAction.UPLOAD_PHOTO)
         await bot.send_photo(chat_id, f"photo/{khodam}.jpg", caption=txt)
         return await xx.delete()
 
