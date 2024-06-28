@@ -224,7 +224,11 @@ async def stats(bot : Client, message : Message):
     group = len(gc)
     user = len(ss)
     await message.reply(MSG.format(group, user))
-    
+
+FORCE_SUB_CHANNEL = "PTSMProject"
+FORCE_SUB_GROUP = "KetikaOtakPerluInspirasi1"
+BOT_USERNAME = "CekKhodam1Bot"
+
 FORCESUB = InlineKeyboardMarkup(
     [
         [
