@@ -49,7 +49,7 @@ Pasukan = [
   "SabunMandi",
   "KangGalon",
   "DagingRendang",
-  "TempeBacem"
+  "TempeBacem",
   "Kecamatan",
   "TissuMagic",
   "Tengtop",
