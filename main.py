@@ -1,6 +1,7 @@
 from pyrogram.errors import ChatAdminRequired, UserNotParticipant, ChatWriteForbidden
 from pyrogram import Client, filters
 from pyrogram.types import *
+from pyrogram import *
 from config import *
 from khodam import *
 from db import *
