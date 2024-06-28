@@ -50,4 +50,15 @@ Pasukan = [
   "KangGalon",
   "DagingRendang",
   "TempeBacem"
+  "Kecamatan",
+  "TissuMagic",
+  "Tengtop",
+  "Monyet",
+  "Mantanmu",
+  "KeranAir",
+  "KangPaket",
+  "KangBakso",
+  "BCAmobile",
+  "Aspal",
+  "TinggiKiris"
 ]
